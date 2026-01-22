@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Analytics Test Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LNBDPB0CE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1LNBDPB0CE');
+</script>
+
+</head>
+<body>
+
+  <h1>Google Analytics Demo Page</h1>
+  <p>This page is tracking visits using Google Analytics 4.</p>
+
+  <button onclick="trackClick()">Click Me</button>
+
+  <script>
+    function trackClick() {
+      gtag('event', 'button_click', {
+        event_category: 'engagement',
+        event_label: 'Demo Button'
+      });
+      alert('Event sent to Google Analytics!');
+    }
+  </script>
+
+</body>
+</html>
